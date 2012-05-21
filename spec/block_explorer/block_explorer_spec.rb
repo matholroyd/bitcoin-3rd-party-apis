@@ -14,6 +14,8 @@ describe BlockExplorer do
     
       it "wraps the transactions in JSON" do
         transactions.first[0].should == "6c5067ee83752022110fafefefcbbba9f006c2c90bce0d7cba4c28258831e0af"
+        transactions.first[1]['out'][0]['value'].should == "0.16200000"
+        transactions.first[1]['out'][1]['value'].should == "0.10000000"
       end
     end
     
