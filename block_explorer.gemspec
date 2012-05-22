@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = BlockExplorer::VERSION
   
-  %w{rspec vcr ir_b guard-rspec}.each do |gem_library|
+  %w{rspec vcr ir_b guard-rspec webmock}.each do |gem_library|
     gem.add_development_dependency gem_library
   end
 end
