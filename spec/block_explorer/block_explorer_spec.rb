@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 describe BlockExplorer do
+  let(:addressA) { '1JDfUiJHZ6pDY6wWYTx86RYjDCW7QxCofs' }
+  let(:addressB) { '1KxepETPK2Xz8e5FaZE62y7Rww4LWuJUhG' }
     
-  context 'mytransactions' do
-    let(:addressA) { '1JDfUiJHZ6pDY6wWYTx86RYjDCW7QxCofs' }
-    let(:addressB) { '1KxepETPK2Xz8e5FaZE62y7Rww4LWuJUhG' }
+  context '#mytransactions' do
     
     context 'getting transactions for one address' do
       use_vcr_cassette
@@ -32,5 +32,13 @@ describe BlockExplorer do
       end
     end
     
+  end
+  
+  context '#getreceivedbyaddress' do
+    use_vcr_cassette
+    
+    it "returns the total received" do
+      BlockExplorer.getreceivedbyaddress(addressA).should == BigDecimal("0.1")
+    end
   end
 end

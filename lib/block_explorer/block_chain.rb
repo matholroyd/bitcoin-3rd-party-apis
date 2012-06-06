@@ -1,7 +1,8 @@
 module BlockExplorer
   module BlockChain
-    MyTransactions = "#{BlockExplorer::Domain}/q/mytransactions"
-    RawTx = "#{BlockExplorer::Domain}/rawtx"
+    MyTransactions =        "#{BlockExplorer::Domain}/q/mytransactions"
+    RawTx =                 "#{BlockExplorer::Domain}/rawtx"
+    GetReceivedByAddress =  "#{BlockExplorer::Domain}/q/getreceivedbyaddress"
 
     def mytransactions(addresses)
       if addresses.is_a?(String)
@@ -9,6 +10,11 @@ module BlockExplorer
       end
       
       get_json "#{MyTransactions}/#{addresses.join('.')}"
+    end
+
+    def getreceivedbyaddress(address)
+      url = "#{GetReceivedByAddress}/#{address}"
+      BigDecimal(open(url).read)
     end
 
     # def rawtx(hash)
