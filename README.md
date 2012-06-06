@@ -20,8 +20,14 @@ Or install it yourself as:
 
 `mytransactions` returns Ruby hash of raw transactions relating to the specified address(es).
 
-    BlockExplorer.mytransactions address
-    BlockExplorer.mytransactions [address1, address2]
+    BlockExplorer.mytransactions(address)
+    BlockExplorer.mytransactions([address1, address2])
+
+
+`getreceivedbyaddress` returns BigDecimal of the total amount of bitcoins sent to the address. 
+
+    BlockExplorer.getreceivedbyaddress(address)
+    BlockExplorer.getreceivedbyaddress(address, 3) # return received amount where transactions have minconf=3
 
 
 ## Contributing
