@@ -35,10 +35,21 @@ describe BlockExplorer do
   end
   
   context '#getreceivedbyaddress' do
-    use_vcr_cassette
-    
-    it "returns the total received" do
-      BlockExplorer.getreceivedbyaddress(addressA).should == BigDecimal("0.1")
+    context "without minconf" do
+      use_vcr_cassette
+
+      it "returns the total received" do
+        BlockExplorer.getreceivedbyaddress(addressA).should == BigDecimal("0.1")
+      end
     end
+    
+    context "minconf" do
+      use_vcr_cassette
+
+      it "returns 0 if minconf is very high" do
+        BlockExplorer.getreceivedbyaddress(addressA, 99999999).should == BigDecimal("0")
+      end
+    end
+    
   end
 end

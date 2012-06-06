@@ -12,8 +12,14 @@ module BlockExplorer
       get_json "#{MyTransactions}/#{addresses.join('.')}"
     end
 
-    def getreceivedbyaddress(address)
-      url = "#{GetReceivedByAddress}/#{address}"
+    def getreceivedbyaddress(address, minconf = 0)
+      if minconf > 0 
+        url = "#{GetReceivedByAddress}/#{address}/#{minconf}"
+      else
+        url = "#{GetReceivedByAddress}/#{address}"
+      end
+      
+      puts url
       BigDecimal(open(url).read)
     end
 
