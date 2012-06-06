@@ -19,7 +19,6 @@ module BlockExplorer
         url = "#{GetReceivedByAddress}/#{address}"
       end
       
-      puts url
       BigDecimal(open(url).read)
     end
 
