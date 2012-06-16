@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/block_explorer/version', __FILE__)
+require File.expand_path('../lib/bitcoin-3rd-party-apis/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Mat Holroyd"]
@@ -11,9 +11,9 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = "block_explorer"
+  gem.name          = "bitcoin-3rd-party-apis"
   gem.require_paths = ["lib"]
-  gem.version       = BlockExplorer::VERSION
+  gem.version       = Bitcoin3rdPartyApis::VERSION
   
   %w{rspec vcr ir_b guard-rspec webmock}.each do |gem_library|
     gem.add_development_dependency gem_library
