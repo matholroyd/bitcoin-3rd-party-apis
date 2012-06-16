@@ -4,9 +4,9 @@ require File.expand_path('../lib/bitcoin-3rd-party-apis/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Mat Holroyd"]
   gem.email         = ["matholroyd@gmail.com"]
-  gem.summary       = %q{Ruby wrapper for the Block Explorer API}
-  gem.description   = %q{BlockExplorer is a Ruby wrapper for the Block Explorer API. Block Explorer (http://blockexplorer.com) is a popular bitcoin blockchain explorer. }
-  gem.homepage      = ""
+  gem.summary       = %q{Ruby wrapper for various 3rd-party bitcoin APIs}
+  gem.description   = %q{Ruby wrapper for Block Explorer and Blockchain.info. Plan to add additional 3rd-party bitcoin APIs}
+  gem.homepage      = "https://github.com/matholroyd/bitcoin-3rd-party-apis"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
