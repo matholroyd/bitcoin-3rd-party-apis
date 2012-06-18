@@ -1,12 +1,12 @@
-# BlockExplorer
+# Bitcoin 3rd-party APIs
 
-Ruby wrapper for Block Explorer (http://blockexplorer.com), a popular bitcoin blockchain explorer. BlockExplorer exposes some handy bitcoin blockchain query methods. This gem exposes some of those methods for easy consumption in a Ruby project.
+Ruby wrapper for various popular 3rd-party bitcoin related APIs. At the moment only Block Explorer (http://blockexplorer.com) and BlockChain.info (http://blockchain.info) are wrapped. The gem exposes some handy bitcoin blockchain query methods, useful for thin bitcoin clients.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'block_explorer'
+    gem 'bitcoin-3rd-party-apis'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install block_explorer
+    $ gem install bitcoin-3rd-party-apis
 
 ## Usage
 
@@ -24,10 +24,13 @@ Or install it yourself as:
     BlockExplorer.mytransactions([address1, address2])
 
 
-`getreceivedbyaddress` returns BigDecimal of the total amount of bitcoins sent to the address. 
+`getreceivedbyaddress` returns BigDecimal of the total amount of bitcoins sent to the address. Note for the `BlockchainInfo` version, `120` is the maximum confirmation number.
 
     BlockExplorer.getreceivedbyaddress(address)
     BlockExplorer.getreceivedbyaddress(address, 3) # return received amount where transactions have minconf=3
+
+    BlockchainInfo.getreceivedbyaddress(address)
+    BlockchainInfo.getreceivedbyaddress(address, 3) # return received amount where transactions have minconf=3
 
 
 ## Contributing
