@@ -1,6 +1,10 @@
-require "block_explorer/constants"
 require "block_explorer/block_chain"
 
-module BlockExplorer
+class BlockExplorer
+  private 
+  
+  def self.domain
+    "https://blockexplorer.com"
+  end
 end
 

@@ -1,22 +1,19 @@
-module BlockExplorer
+class BlockExplorer
   module BlockChain
-    MyTransactions =        "#{BlockExplorer::Domain}/q/mytransactions"
-    RawTx =                 "#{BlockExplorer::Domain}/rawtx"
-    GetReceivedByAddress =  "#{BlockExplorer::Domain}/q/getreceivedbyaddress"
 
     def mytransactions(addresses)
       if addresses.is_a?(String)
         addresses = [addresses]
       end
       
-      get_json "#{MyTransactions}/#{addresses.join('.')}"
+      get_json "#{mytransactions_url}/#{addresses.join('.')}"
     end
 
     def getreceivedbyaddress(address, minconf = 0)
       if minconf > 0 
-        url = "#{GetReceivedByAddress}/#{address}/#{minconf}"
+        url = "#{getreceivedbyaddress_url}/#{address}/#{minconf}"
       else
-        url = "#{GetReceivedByAddress}/#{address}"
+        url = "#{getreceivedbyaddress_url}/#{address}"
       end
       
       BigDecimal(open(url).read)
@@ -27,6 +24,18 @@ module BlockExplorer
     # end
     
     private 
+        
+    def mytransactions_url
+      "#{domain}/q/mytransactions"
+    end
+    
+    def rawtx_url
+      "#{domain}/rawtx"
+    end
+    
+    def getreceivedbyaddress_url
+      "#{domain}/q/getreceivedbyaddress"
+    end
     
     def get_json(url)
       JSON.parse open(url).read
