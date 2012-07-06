@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://blockchain.info/multiaddr?active=1JDfUiJHZ6pDY6wWYTx86RYjDCW7QxCofs%7C1abcdef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - SID=b63bd142-d643-4f46-acc1-d9c17f7e9d07; Expires=Fri, 03-Aug-2012 23:29:35
+        GMT; Path=/
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1849'
+      Date:
+      - Fri, 06 Jul 2012 23:29:35 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "\n\n{\n\n\t\"info\": {\n\t\t\n\t\t\"conversion\":100000000,\n\t\t\"nconnected\":274,\n\t\t\"symbol_local\":{\"code\"
+        : \"USD\", \"symbol\" : \"$\", \"name\" : \"U.S. dollar\",  \"conversion\"
+        : 14880996, \"symbolAppearsAfter\" : false}\n\t\t, \"latest_block\" : { \n\t\t\t\"height\":187864,\n\t\t\t\"block_index\":243230,\n\t\t\t\"hash\":\"0000000000000728cb6fd5d75bdcd886315d4cbdd7130a6fc24c97f228519fea\",\n\t\t\t\"time\":1341617277\n\t\t},
+        \"error\" : \"You have an invalid bitcoin address\"\n\t}\n\t,\"wallet\": {\n\t\t\"n_tx\":2,\n\t\t\"n_tx_filtered\":2,\n\t\t\"total_received\":10000000,\n\t\t\"total_sent\":10000000,\n\t\t\"final_balance\":0\n\t},\n\t\"addresses\":[\n\t\n\t{\n\t\t\"address\":\"1JDfUiJHZ6pDY6wWYTx86RYjDCW7QxCofs\",\n\t\t\"n_tx\":2,\n\t\t\"total_received\":10000000,\n\t\t\"total_sent\":10000000,\n\t\t\"final_balance\":0\n\t}\n\t\n\t],\t\t\t\n\t\"txs\":[\n\t\n\t\n\t\n\t\n\t\n\t\n{\n\t\"hash\":\"21dd59c14dc771550b78dbfb3fd57386ad21bb02ad8c8989c7e6bbd8a2e85418\",\n\t\"ver\":1,\n\t\"vin_sz\":1,\n\t\"vout_sz\":1,\n\t\"size\":223,\n\t\"relayed_by\":\"199.188.194.36\",\n\t\"tx_index\":2597766,\"result\":-10000000,\"balance\":0,\n\t\"time\":1330114726,\"block_height\":166328,\n\t\"inputs\":[\n\t\t\t{\n\t\t\t\t\n\t\t\t\t\"prev_out\":{\n\t\t\t\t\t\"type\":0,\n\t\t\t\t\t\"addr\":\"1JDfUiJHZ6pDY6wWYTx86RYjDCW7QxCofs\",
+        \ \n\t\t\t\t\t\"value\":10000000,\n\t\t\t\t\t\"tx_index\":2361741,\n\t\t\t\t\t\"n\":1\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\"out\":[\n\t\t\t{\n\t\t\t\t\"addr\":\"1Eqr3DVzC1c2n85WkffznhXTp2dmUY6RLm\",
+        \ \n\t\t\t\t\"value\":10000000, \n\t\t\t\t\"type\":0\n\t\t\t}\n\t\t]\n},\n\t\n\t\n\t\n\t\n\t\n\t\n{\n\t\"hash\":\"6c5067ee83752022110fafefefcbbba9f006c2c90bce0d7cba4c28258831e0af\",\n\t\"ver\":1,\n\t\"vin_sz\":1,\n\t\"vout_sz\":2,\n\t\"size\":257,\n\t\"relayed_by\":\"199.188.194.36\",\n\t\"tx_index\":2361741,\"result\":10000000,\"balance\":10000000,\n\t\"time\":1330114726,\"block_height\":161186,\n\t\"inputs\":[\n\t\t\t{\n\t\t\t\t\n\t\t\t\t\"prev_out\":{\n\t\t\t\t\t\"type\":0,\n\t\t\t\t\t\"addr\":\"1McjPsUHS7ifNwSnRDrvKud7h3o4aCs5Pu\",
+        \ \n\t\t\t\t\t\"value\":26200000,\n\t\t\t\t\t\"tx_index\":976849,\n\t\t\t\t\t\"n\":1\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\"out\":[\n\t\t\t{\n\t\t\t\t\"addr\":\"1JDfUiJHZ6pDY6wWYTx86RYjDCW7QxCofs\",
+        \ \n\t\t\t\t\"value\":10000000, \n\t\t\t\t\"type\":0\n\t\t\t}\n\t\t]\n}]\n\t\n}"
+    http_version: 
+  recorded_at: Fri, 06 Jul 2012 23:29:35 GMT
+- request:
+    method: get
+    uri: https://blockchain.info/multiaddr?active=1JDfUiJHZ6pDY6wWYTx86RYjDCW7QxCofs%7C1abcdef
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - SID=778d143b-a737-4a60-9515-b7cf54246cb6; Expires=Fri, 03-Aug-2012 23:29:36
+        GMT; Path=/
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1849'
+      Date:
+      - Fri, 06 Jul 2012 23:29:35 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "\n\n{\n\n\t\"info\": {\n\t\t\n\t\t\"conversion\":100000000,\n\t\t\"nconnected\":274,\n\t\t\"symbol_local\":{\"code\"
+        : \"USD\", \"symbol\" : \"$\", \"name\" : \"U.S. dollar\",  \"conversion\"
+        : 14880996, \"symbolAppearsAfter\" : false}\n\t\t, \"latest_block\" : { \n\t\t\t\"height\":187864,\n\t\t\t\"block_index\":243230,\n\t\t\t\"hash\":\"0000000000000728cb6fd5d75bdcd886315d4cbdd7130a6fc24c97f228519fea\",\n\t\t\t\"time\":1341617277\n\t\t},
+        \"error\" : \"You have an invalid bitcoin address\"\n\t}\n\t,\"wallet\": {\n\t\t\"n_tx\":2,\n\t\t\"n_tx_filtered\":2,\n\t\t\"total_received\":10000000,\n\t\t\"total_sent\":10000000,\n\t\t\"final_balance\":0\n\t},\n\t\"addresses\":[\n\t\n\t{\n\t\t\"address\":\"1JDfUiJHZ6pDY6wWYTx86RYjDCW7QxCofs\",\n\t\t\"n_tx\":2,\n\t\t\"total_received\":10000000,\n\t\t\"total_sent\":10000000,\n\t\t\"final_balance\":0\n\t}\n\t\n\t],\t\t\t\n\t\"txs\":[\n\t\n\t\n\t\n\t\n\t\n\t\n{\n\t\"hash\":\"21dd59c14dc771550b78dbfb3fd57386ad21bb02ad8c8989c7e6bbd8a2e85418\",\n\t\"ver\":1,\n\t\"vin_sz\":1,\n\t\"vout_sz\":1,\n\t\"size\":223,\n\t\"relayed_by\":\"199.188.194.36\",\n\t\"tx_index\":2597766,\"result\":-10000000,\"balance\":0,\n\t\"time\":1330114726,\"block_height\":166328,\n\t\"inputs\":[\n\t\t\t{\n\t\t\t\t\n\t\t\t\t\"prev_out\":{\n\t\t\t\t\t\"type\":0,\n\t\t\t\t\t\"addr\":\"1JDfUiJHZ6pDY6wWYTx86RYjDCW7QxCofs\",
+        \ \n\t\t\t\t\t\"value\":10000000,\n\t\t\t\t\t\"tx_index\":2361741,\n\t\t\t\t\t\"n\":1\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\"out\":[\n\t\t\t{\n\t\t\t\t\"addr\":\"1Eqr3DVzC1c2n85WkffznhXTp2dmUY6RLm\",
+        \ \n\t\t\t\t\"value\":10000000, \n\t\t\t\t\"type\":0\n\t\t\t}\n\t\t]\n},\n\t\n\t\n\t\n\t\n\t\n\t\n{\n\t\"hash\":\"6c5067ee83752022110fafefefcbbba9f006c2c90bce0d7cba4c28258831e0af\",\n\t\"ver\":1,\n\t\"vin_sz\":1,\n\t\"vout_sz\":2,\n\t\"size\":257,\n\t\"relayed_by\":\"199.188.194.36\",\n\t\"tx_index\":2361741,\"result\":10000000,\"balance\":10000000,\n\t\"time\":1330114726,\"block_height\":161186,\n\t\"inputs\":[\n\t\t\t{\n\t\t\t\t\n\t\t\t\t\"prev_out\":{\n\t\t\t\t\t\"type\":0,\n\t\t\t\t\t\"addr\":\"1McjPsUHS7ifNwSnRDrvKud7h3o4aCs5Pu\",
+        \ \n\t\t\t\t\t\"value\":26200000,\n\t\t\t\t\t\"tx_index\":976849,\n\t\t\t\t\t\"n\":1\n\t\t\t\t}\n\t\t\t}\n\t\t],\n\t\"out\":[\n\t\t\t{\n\t\t\t\t\"addr\":\"1JDfUiJHZ6pDY6wWYTx86RYjDCW7QxCofs\",
+        \ \n\t\t\t\t\"value\":10000000, \n\t\t\t\t\"type\":0\n\t\t\t}\n\t\t]\n}]\n\t\n}"
+    http_version: 
+  recorded_at: Fri, 06 Jul 2012 23:29:36 GMT
+recorded_with: VCR 2.2.1

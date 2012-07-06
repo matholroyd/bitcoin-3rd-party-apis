@@ -1,6 +1,15 @@
 class BlockchainInfo
   module BlockChain
 
+    def multiaddr(addresses)
+      if addresses.is_a?(String)
+        addresses = [addresses]
+      end
+      
+      url = "#{multiaddr_url}?active=#{addresses.join('|')}"
+      JSON.parse(open(URI.encode(url)).read)
+    end
+
     def getreceivedbyaddress(address, minconf = 0)
       if minconf > 0 
         url = "#{getreceivedbyaddress_url}/#{address}?confirmations=#{minconf}"
@@ -19,6 +28,10 @@ class BlockchainInfo
                 
     def getreceivedbyaddress_url
       "#{domain}/q/getreceivedbyaddress"
+    end
+    
+    def multiaddr_url
+      "#{domain}/multiaddr"
     end
     
     def get_json(url)
