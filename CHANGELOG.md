@@ -1,3 +1,7 @@
+## v0.3.0
+
+* Added BlockchainInfo.multiaddr call.
+
 ## v0.2.0
 
 * Added http://blockchain.info call, BlockchainInfo.getreceivedbyaddress.
