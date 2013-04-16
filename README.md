@@ -42,6 +42,13 @@ Or install it yourself as:
     BlockchainInfo.getreceivedbyaddress(address, 3) # return received amount where transactions have minconf=3
 ```
 
+`longest_block_count` returns count of the longest blockchain in the network. This blockchain is considered the **current** blockchain.
+
+
+```ruby
+    BlockchainInfo.longest_block_count
+```
+
 ## Contributing
 
 1. Fork it
