@@ -19,6 +19,10 @@ class BlockchainInfo
       
       satoshi_to_bitcoins BigDecimal(open(url).read)
     end
+    
+    def longest_block_count
+      BigDecimal(open("#{domain}/q/getblockcount").read).to_i
+    end
 
     private 
     

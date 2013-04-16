@@ -49,4 +49,12 @@ describe BlockchainInfo do
     end
   end
   
+  context "longest block count" do
+    use_vcr_cassette
+    
+    it "should be greater then 231560" do
+      BlockchainInfo.longest_block_count.should > 231560
+    end
+  end
+  
 end
